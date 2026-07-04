@@ -1,0 +1,44 @@
+aid: ritual-ordering
+url: https://raw.githubusercontent.com/api-evangelist/ritual-ordering/refs/heads/main/apis.yml
+name: Ritual
+kind: company
+description: Ritual is a Toronto-based restaurant order-ahead and "social ordering"
+  platform (ritual.co, founded 2014) that lets consumers pre-order, pay, and skip
+  the line at local restaurants and coffee shops, and lets colleagues pile onto a
+  shared order for group pickup. For restaurants it offers Ritual ONE (online
+  ordering, company/building perk programs, and Ritual for Coffee). Ritual does NOT
+  publish a public or self-serve developer API - there is no developer portal, API
+  reference, SDKs, or authentication documentation. Restaurant order injection into
+  point-of-sale systems is handled through partner/POS integrations (documented on
+  partnersupport.ritual.co) and third-party ordering aggregators such as Deliverect,
+  not through a Ritual-published API. Operating status - Ritual continues to operate
+  the consumer app and online-ordering platform, but the business is distressed and
+  in transition - revenue fell from ~US$11M (2021) to ~US$3.9M (H1 2024) with
+  repeated layoffs, and in January 2025 Shopify "acqui-hired" the co-founders (CEO
+  Ray Reddy became Shopify's VP of Retail/POS) and much of the R&D team while a
+  separate process to sell the standalone Ritual business was underway. This entry
+  is a documentation stub with no APIs modeled because none are publicly
+  documented.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Restaurants
+- Order Ahead
+- Online Ordering
+- Food Ordering
+- Social Ordering
+- Payments
+- POS Integration
+- No Public API
+created: '2026-07-04'
+modified: '2026-07-04'
+specificationVersion: '0.19'
+common:
+- type: Website
+  url: https://ritual.co
+- type: LinkedIn
+  url: https://ca.linkedin.com/company/ritual-co
+- type: Documentation
+  url: https://partnersupport.ritual.co/hc/en-us/categories/360005652153-POS-Integrations
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

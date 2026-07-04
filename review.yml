@@ -1,0 +1,100 @@
+aid: ritual-ordering
+name: Ritual
+review:
+  question: Does Ritual expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-04'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Ritual publishes no documented public API of
+    any kind - REST, WebSocket, or otherwise. There is no developer portal, API
+    reference, SDK, or authentication documentation on ritual.co. With no
+    server-push or realtime transport documented (and in fact no public API
+    surface at all), there is nothing to model as AsyncAPI.
+operatingStatus: |
+  Operational but distressed and in transition. Ritual (ritual.co, Toronto,
+  founded 2014 by Ray Reddy, Larry Stinson, and Robert Kim) continues to run its
+  consumer order-ahead app and its Ritual ONE restaurant online-ordering platform
+  as of 2025. However, the company has been in financial decline - revenue fell
+  from ~US$11M in 2021 to ~US$8.4M in 2023 to ~US$3.9M in the first half of 2024,
+  with cash dwindling and repeated layoffs (staff cut to under 50). In January
+  2025 Shopify "acqui-hired" the co-founders (CEO Ray Reddy joined Shopify as VP
+  of Retail, working on Shopify POS) and much of the R&D team; the standalone
+  Ritual business was left to operate under new leadership while a separate
+  process to sell it as a going concern (with at least two interested buyers in
+  due diligence) was underway. Future of the standalone platform is uncertain.
+findings:
+  summary: |
+    Ritual does not publish any documented public API - no WebSocket API and no
+    REST API. Ritual is a restaurant order-ahead / "social ordering" platform:
+    consumers order and pay ahead via the mobile app, and restaurants receive and
+    manage those orders. There is no developer portal, no API reference, no SDKs,
+    and no authentication or base-URL documentation on ritual.co. The API Tracker
+    profile for Ritual is an empty placeholder with no endpoints, auth, or docs.
+    Restaurant-side integration (getting Ritual orders into a point-of-sale
+    system) is delivered through Ritual's partner/POS integration program
+    (documented for restaurant operators on partnersupport.ritual.co, e.g. Toast
+    integration) and through third-party ordering aggregators such as Deliverect,
+    which run a two-way integration between Ritual and the restaurant's POS. None
+    of this exposes a Ritual-published, publicly consumable API.
+  publicApi: |
+    None. Ritual exposes no documented public or self-serve developer API. Access
+    is via the consumer apps (iOS/Android/web) and via partner-gated POS
+    integrations arranged through Ritual's partnerships team and third-party
+    aggregators. No API keys, OAuth, or endpoints are publicly documented.
+  pricing: |
+    Consumer app is free to download; restaurants historically were charged a flat
+    ~US$49/month per location for Ritual ONE, and Ritual has repeatedly marketed
+    its basic online-ordering tool as commission-free / "free" to restaurants
+    (including a City of Toronto partnership providing a free ordering tool to
+    local foodservice businesses). No public, current pricing page is published;
+    restaurant pricing is quoted through sales.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API documentation exists on ritual.co or any Ritual developer portal.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere for Ritual.
+    - protocol: POS Integration
+      scheme: https
+      documented: partial
+      note: >-
+        Order-to-POS integration is delivered via Ritual's partner program and
+        third-party aggregators (e.g. Deliverect). Operator-facing setup docs live
+        at partnersupport.ritual.co; no consumer-facing API reference is published.
+  endpointsModeled: none
+sources:
+  - url: https://ritual.co
+    type: Website
+    note: Company/product homepage. Lists Ritual App, Online Ordering, Ritual for Companies/Buildings/Coffee. No API or developer links.
+  - url: https://apitracker.io/a/ritual-co
+    type: Profile
+    note: API Tracker entry for Ritual - empty placeholder, no docs, endpoints, SDKs, or auth listed.
+  - url: https://partnersupport.ritual.co/hc/en-us/categories/360005652153-POS-Integrations
+    type: Documentation
+    note: Operator-facing POS integration help center (Toast, etc.). Integration guidance, not a public API reference.
+  - url: https://www.deliverect.com/en-us/integrations/ritual
+    type: Integration
+    note: Third-party aggregator two-way integration piping Ritual orders into a restaurant POS.
+  - url: https://ca.linkedin.com/company/ritual-co
+    type: LinkedIn
+    note: Company profile - "for restaurants and the people who love them"; ~13k followers.
+  - url: https://betakit.com/ritual-ceo-rd-team-members-to-join-shopify/
+    type: News
+    note: Jan 2025 - Shopify acqui-hires Ritual CEO Ray Reddy and R&D team; separate sale process for the business.
+  - url: https://www.theglobeandmail.com/business/article-food-ordering-service-ritual-lays-off-nearly-half-of-employees/
+    type: News
+    note: Revenue decline and layoffs history documenting the distressed operating status.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    Documented as a stub. Ritual publishes no public API (REST or WebSocket), so
+    no APIs were modeled and no AsyncAPI document was created. The apis.yml records
+    the company, its access model (partner/POS integrations and aggregators, no
+    public API), and its distressed operating status, with Website, LinkedIn, and
+    the partner POS-integration help center as common properties.
