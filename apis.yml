@@ -32,6 +32,15 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ritual-ordering.png
 tags:
+- Restaurant
+- Order Ahead
+- Online Ordering
+- Food Ordering
+- Social Ordering
+- Payments
+- POS Integration
+- No Public API
+tags_raw:
 - Restaurants
 - Order Ahead
 - Online Ordering
