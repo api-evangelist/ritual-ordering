@@ -19,6 +19,17 @@ description: Ritual is a Toronto-based restaurant order-ahead and "social orderi
   separate process to sell the standalone Ritual business was underway. This entry
   is a documentation stub with no APIs modeled because none are publicly
   documented.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
