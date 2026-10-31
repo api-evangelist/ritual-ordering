@@ -1,4 +1,4 @@
-# Ritual (ritual-ordering)
+# Ritual
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,53 +64,82 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Ritual is a Toronto-based restaurant order-ahead and "social ordering" platform ([ritual.co](https://ritual.co), founded 2014 by Ray Reddy, Larry Stinson, and Robert Kim). Consumers use the Ritual mobile app to pre-order, pay, and skip the line at local restaurants and coffee shops, and colleagues can pile onto a shared order for group pickup. For restaurants, Ritual offers Ritual ONE (online ordering), plus perk programs for companies and buildings and a Ritual for Coffee product.
+Ritual is a Toronto-based restaurant order-ahead and "social ordering" platform (ritual.co, founded 2014) that lets consumers pre-order, pay, and skip the line at local restaurants and coffee shops, and lets colleagues pile onto a shared order for group pickup. For restaurants it offers Ritual ONE (online ordering, company/building perk programs, and Ritual for Coffee). Ritual does NOT publish a public or self-serve developer API - there is no developer portal, API reference, SDKs, or authentication documentation. Restaurant order injection into point-of-sale systems is handled through partner/POS integrations (documented on partnersupport.ritual.co) and third-party ordering aggregators such as Deliverect, not through a Ritual-published API. Operating status - Ritual continues to operate the consumer app and online-ordering platform, but the business is distressed and in transition - revenue fell from ~US$11M (2021) to ~US$3.9M (H1 2024) with repeated layoffs, and in January 2025 Shopify "acqui-hired" the co-founders (CEO Ray Reddy became Shopify's VP of Retail/POS) and much of the R&D team while a separate process to sell the standalone Ritual business was underway. This entry is a documentation stub with no APIs modeled because none are publicly documented.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/ritual-ordering/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/ritual-ordering/refs/heads/main/apis.yml)
+**Areas:** Restaurant · Order Ahead · Online Ordering · Food Ordering · Social Ordering · Payments · POS Integration
 
-## API Access Model
+## Ritual on APIs.io
 
-**Ritual does not publish a public or self-serve developer API.** This entry is an honest documentation stub. As of this review:
+Everything profiled for Ritual is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ritual-ordering/](https://apis.io/providers/ritual-ordering/)** — or go straight to one of the APIs or properties below.
 
-- There is **no developer portal, API reference, SDK, or authentication documentation** on ritual.co.
-- The [API Tracker](https://apitracker.io/a/ritual-co) profile for Ritual is an empty placeholder with no endpoints, auth, or docs.
-- Restaurant-side integration (getting Ritual orders into a point-of-sale system) is delivered through **partner/POS integrations** documented for operators at [partnersupport.ritual.co](https://partnersupport.ritual.co/hc/en-us/categories/360005652153-POS-Integrations) (e.g. Toast) and through **third-party ordering aggregators** such as [Deliverect](https://www.deliverect.com/en-us/integrations/ritual), which run a two-way integration between Ritual and the restaurant's POS.
-- None of this exposes a Ritual-published, publicly consumable API. Access is via the consumer apps (iOS/Android/web) and partner-gated integrations arranged through Ritual's partnerships team.
+### Published properties
 
-Because no public API is documented, no `openapi/`, `plans/`, `rate-limits/`, `finops/`, or `collections/` artifacts are included, and no endpoints are modeled (`endpointsModeled: none`).
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Operating Status
+#### Security (2)
 
-**Operational but distressed and in transition.** Ritual continues to run its consumer order-ahead app and Ritual ONE online-ordering platform as of 2025, but the business has been in financial decline - revenue fell from ~US$11M (2021) to ~US$8.4M (2023) to ~US$3.9M (H1 2024), with dwindling cash and repeated layoffs (staff cut to under 50). In **January 2025, Shopify "acqui-hired"** the co-founders (CEO Ray Reddy joined Shopify as VP of Retail, working on Shopify POS) and much of the R&D team, while a **separate process to sell the standalone Ritual business** (with at least two interested buyers in due diligence) was underway. The long-term future of the standalone platform is uncertain.
+Authentication, trust centre, and vulnerability disclosure.
 
-## Pricing
+- [Ritual Ordering Domain Security](https://apis.io/security/ritual-ordering/ritual-ordering-domain-security/)
+- [Ritual Ordering Vulnerability Disclosure](https://apis.io/security/ritual-ordering/ritual-ordering-vulnerability-disclosure/)
 
-- **Consumers:** the app is free to download and use.
-- **Restaurants:** historically a flat **~US$49/month per location** for Ritual ONE; Ritual has repeatedly marketed its basic online-ordering tool as **commission-free / "free"** to restaurants (including a City of Toronto partnership providing a free ordering tool to local foodservice businesses). No current public pricing page is published - restaurant pricing is quoted through sales.
+## Where to find this API
 
-## Tags
-
-- Restaurants
-- Order Ahead
-- Online Ordering
-- Food Ordering
-- Social Ordering
-- Payments
-- POS Integration
-- No Public API
-
-## Timestamps
-
-- **Created:** 2026-07-04
-- **Modified:** 2026-07-04
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://ritual.co)
-- [LinkedIn](https://ca.linkedin.com/company/ritual-co)
-- [Documentation (Partner POS Integrations)](https://partnersupport.ritual.co/hc/en-us/categories/360005652153-POS-Integrations)
+- [Documentation](https://partnersupport.ritual.co/hc/en-us/categories/360005652153-POS-Integrations)
+- [Blog](https://ritual.co/blog)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 5.9** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.7** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ritual-ordering/](https://apis.io/providers/ritual-ordering/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Ritual: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ritual-ordering/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
